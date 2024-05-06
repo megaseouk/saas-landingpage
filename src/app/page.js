@@ -1,95 +1,182 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+// pages/index.js
+"use client";
+
+import {
+  Container,
+  Navbar,
+  Nav,
+  Button,
+  Row,
+  Col,
+  Card,
+} from "react-bootstrap";
+
+import {
+  HiOutlineLightBulb,
+  HiOutlinePuzzle,
+  HiOutlineCurrencyDollar,
+  HiOutlineInformationCircle,
+  HiOutlineCheckCircle,
+  HiOutlineChartBar,
+  HiOutlineUserGroup,
+  HiOutlineCash,
+} from "react-icons/hi";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+    <>
+      <section className="hero bg-primary text-white py-5 text-center">
+        <Container>
+          <HiOutlineLightBulb size={50} className="mb-3" />
+          <h1>Transform Your Business with Our SaaS Platform</h1>
+          <p className="mb-4">
+            Empowering businesses worldwide with cutting-edge tools to
+            streamline workflows, enhance collaboration, and drive growth.
           </p>
-        </a>
-      </div>
-    </main>
+          <Button variant="light" size="lg" className="me-3">
+            Get Started
+          </Button>
+          <Button variant="outline-light" size="lg">
+            Learn More
+          </Button>
+        </Container>
+      </section>
+
+      <section id="features" className="py-5">
+        <Container>
+          <h2 className="text-center mb-4">
+            Powerful Features to Accelerate Your Growth
+          </h2>
+          <p className="text-center mb-5">
+            Our platform offers a comprehensive suite of tools to simplify,
+            streamline, and automate your workflow.
+          </p>
+          <Row>
+            <Col md={4}>
+              <Card className="mb-4">
+                <Card.Body>
+                  <HiOutlineCheckCircle
+                    size={30}
+                    className="text-primary mb-3"
+                  />
+                  <Card.Title>Feature One: Automated Workflow</Card.Title>
+                  <Card.Text>
+                    Streamline your tasks with automated workflows that reduce
+                    manual input and enhance productivity.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card className="mb-4">
+                <Card.Body>
+                  <HiOutlineChartBar size={30} className="text-primary mb-3" />
+                  <Card.Title>Feature Two: Intuitive Analytics</Card.Title>
+                  <Card.Text>
+                    Gain actionable insights with our intuitive analytics
+                    dashboards that drive data-based decisions.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card className="mb-4">
+                <Card.Body>
+                  <HiOutlineUserGroup size={30} className="text-primary mb-3" />
+                  <Card.Title>Feature Three: Enhanced Collaboration</Card.Title>
+                  <Card.Text>
+                    Collaborate seamlessly with your team using our powerful
+                    communication and project management tools.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section id="pricing" className="bg-light py-5">
+        <Container>
+          <h2 className="text-center mb-4">Affordable Pricing Plans</h2>
+          <p className="text-center mb-5">
+            Choose a pricing plan that suits your business needs and budget. No
+            hidden fees or extra costs.
+          </p>
+          <Row>
+            <Col md={4}>
+              <Card className="mb-4">
+                <Card.Body>
+                  <HiOutlineCash size={30} className="text-primary mb-3" />
+                  <Card.Title>Basic Plan</Card.Title>
+                  <Card.Text>
+                    Ideal for small businesses starting their digital
+                    transformation journey.
+                  </Card.Text>
+                  <h3>$9.99/month</h3>
+                  <Button variant="primary">Sign Up</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card className="mb-4">
+                <Card.Body>
+                  <HiOutlineCash size={30} className="text-primary mb-3" />
+                  <Card.Title>Standard Plan</Card.Title>
+                  <Card.Text>
+                    Perfect for growing businesses looking to scale their
+                    operations.
+                  </Card.Text>
+                  <h3>$19.99/month</h3>
+                  <Button variant="primary">Sign Up</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card className="mb-4">
+                <Card.Body>
+                  <HiOutlineCash size={30} className="text-primary mb-3" />
+                  <Card.Title>Premium Plan</Card.Title>
+                  <Card.Text>
+                    Best for established businesses with advanced needs and
+                    custom requirements.
+                  </Card.Text>
+                  <h3>$29.99/month</h3>
+                  <Button variant="primary">Sign Up</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section id="about" className="py-5">
+        <Container>
+          <h2 className="text-center mb-4">About Us</h2>
+          <Row>
+            <Col md={6}>
+              <HiOutlineInformationCircle
+                size={30}
+                className="text-primary mb-3"
+              />
+              <h3>Our Mission</h3>
+              <p>
+                Our mission is to empower businesses worldwide with
+                state-of-the-art SaaS solutions designed to simplify processes
+                and boost productivity.
+              </p>
+            </Col>
+            <Col md={6}>
+              <HiOutlinePuzzle size={30} className="text-primary mb-3" />
+              <h3>Our Vision</h3>
+              <p>
+                We envision a world where innovative and user-friendly software
+                is accessible to all industries, driving a new era of business
+                efficiency.
+              </p>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    </>
   );
 }
