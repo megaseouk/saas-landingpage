@@ -73,7 +73,7 @@ https://twitter.com/SmithDonna56134
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-username/saas-boilerplate.git
+   git clone https://github.com/megaseouk/saas-landingpage.git
    ```
 
 ### Navigate to the Project Directory
