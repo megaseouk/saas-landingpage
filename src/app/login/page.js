@@ -1,5 +1,3 @@
-// src/app/login.js
-
 "use client";
 
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";

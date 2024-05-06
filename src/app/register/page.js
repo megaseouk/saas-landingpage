@@ -1,5 +1,3 @@
-// src/app/register.js
-
 "use client";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 import Link from "next/link";
