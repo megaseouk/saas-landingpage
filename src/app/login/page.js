@@ -31,7 +31,8 @@ export default function Login() {
                   Login
                 </Button>
                 <Form.Text className="text-center">
-                  Don't have an account? <Link href="/signup">Sign Up</Link>
+                  Don&apos;t have an account?{" "}
+                  <Link href="/signup">Sign Up</Link>
                 </Form.Text>
               </Form>
             </Card.Body>
