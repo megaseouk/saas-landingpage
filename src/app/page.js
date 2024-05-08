@@ -9,6 +9,7 @@ import {
   Row,
   Col,
   Card,
+  Form,
 } from "react-bootstrap";
 
 import {
@@ -175,6 +176,73 @@ export default function Home() {
               </p>
             </Col>
           </Row>
+        </Container>
+      </section>
+      <section id="testimonials" className="py-5">
+        <Container>
+          <h2 className="text-center mb-4">What Our Customers Are Saying</h2>
+          <Row>
+            <Col md={4}>
+              <Card className="mb-4">
+                <Card.Body>
+                  <Card.Text>
+                    "The SaaS platform transformed our workflow and has greatly
+                    improved our team's productivity!"
+                  </Card.Text>
+                  <Card.Subtitle className="mt-4">
+                    — Sarah Johnson, CEO at TechCorp
+                  </Card.Subtitle>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card className="mb-4">
+                <Card.Body>
+                  <Card.Text>
+                    "A game-changer for our organization! Their analytics
+                    dashboards provide invaluable insights."
+                  </Card.Text>
+                  <Card.Subtitle className="mt-4">
+                    — Mike Smith, Head of Analytics at FinTech
+                  </Card.Subtitle>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card className="mb-4">
+                <Card.Body>
+                  <Card.Text>
+                    "Highly intuitive and effective SaaS solution for
+                    collaboration and productivity!"
+                  </Card.Text>
+                  <Card.Subtitle className="mt-4">
+                    — Lisa Brown, Project Manager at InnovateX
+                  </Card.Subtitle>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section
+        id="newsletter"
+        className="bg-primary text-white py-5 text-center"
+      >
+        <Container>
+          <h2>Stay Updated with Our Latest News</h2>
+          <p className="mb-4">
+            Subscribe to our newsletter for industry insights, tips, and product
+            updates!
+          </p>
+          <Form className="d-flex justify-content-center">
+            <Form.Control
+              type="email"
+              placeholder="Enter your email"
+              className="me-2 w-50"
+            />
+            <Button variant="light">Subscribe</Button>
+          </Form>
         </Container>
       </section>
     </>

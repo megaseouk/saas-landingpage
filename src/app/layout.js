@@ -6,8 +6,15 @@ import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
-import { Container, Navbar, Nav, Button } from "react-bootstrap";
+import { Container, Navbar, Nav, Button, Row, Col } from "react-bootstrap";
 import { HiOutlineLightBulb } from "react-icons/hi";
+
+import {
+  FaFacebook,
+  FaTwitterSquare,
+  FaInstagramSquare,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +44,8 @@ export default function RootLayout({ children }) {
                     <Nav.Link href="/#features">Features</Nav.Link>
                     <Nav.Link href="/#pricing">Pricing</Nav.Link>
                     <Nav.Link href="/#about">About</Nav.Link>
+                    <Nav.Link href="/#testimonials">Testimonals</Nav.Link>
+                    <Nav.Link href="/#newsletter">Newlestter</Nav.Link>
                     <Nav.Link href="/login">
                       <Button variant="outline-light" className="ms-3">
                         Login
@@ -55,7 +64,17 @@ export default function RootLayout({ children }) {
           <main>{children}</main>
           <footer className="bg-dark text-white text-center py-3">
             <Container>
-              <p>&copy; 2024 SaaS Company. All rights reserved.</p>
+              <Row>
+                <Col md={12}>
+                  <p>&copy; 2024 SaaS Company. All rights reserved.</p>
+                  <div className="d-flex justify-content-center">
+                    <FaFacebook size={30} className="text-white me-3" />
+                    <FaTwitterSquare size={30} className="text-white me-3" />
+                    <FaInstagramSquare size={30} className="text-white me-3" />
+                    <FaLinkedin size={30} className="text-white me-3" />
+                  </div>
+                </Col>
+              </Row>
             </Container>
           </footer>
         </Container>
